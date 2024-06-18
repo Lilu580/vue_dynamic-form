@@ -1,21 +1,23 @@
 <template>
-  <div>
+  <div class="p-4 max-w-md mx-auto">
     <input
       v-model="searchQuery"
       placeholder="Search..."
       @input="highlightFields"
+      class="mb-4 p-2 border border-gray-300 rounded w-full"
     />
-    <form @submit.prevent>
-      <div v-for="(field, index) in fields" :key="field.id" class="field-group">
+    <form @submit.prevent class="space-y-4">
+      <div v-for="(field, index) in fields" :key="field.id" class="field-group flex items-center space-x-2">
         <input
           v-model="field.value"
-          :class="{ highlight: searchQuery && field.value.includes(searchQuery) }"
+          :class="{'bg-green-200': searchQuery && field.value.includes(searchQuery)}"
           @input="countVowels(index)"
+          class="p-2 border border-gray-300 rounded flex-1"
         />
         <span>Vowels: {{ field.vowelCount }}</span>
-        <button type="button" @click="removeField(index)" v-if="fields.length > 1">Remove</button>
+        <button type="button" @click="removeField(index)" v-if="fields.length > 1" class="text-red-500">Remove</button>
       </div>
-      <button type="button" @click="addField" :disabled="fields.length >= 10">Add Field</button>
+      <button type="button" @click="addField" :disabled="fields.length >= 10" class="p-2 bg-blue-500 text-white rounded">Add Field</button>
     </form>
   </div>
 </template>
