@@ -1,61 +1,68 @@
-# dynamic-form
+Dynamic Form with Vue 3 and Tailwind CSS
+This project is a dynamic form built with Vue 3, Vite, and Tailwind CSS. The form allows users to add and remove input fields dynamically, count vowels in each field, and highlight fields based on a search query.
 
-This template should help get you started developing with Vue 3 in Vite.
+Features
+Dynamic Fields: Add up to 10 input fields. Each field has a button to remove it if there are more than one field.
+Vowel Count: Displays the count of vowels (a, e, i, o, u) in each input field.
+Search Functionality: A search field at the top highlights any input field that contains the entered text. If the search text matches any text in the input fields, the search field itself is highlighted.
+Installation
+Clone the repository:
 
-## Recommended IDE Setup
+git clone https://github.com/Lilu580/vue_dynamic-form
+cd dynamic-form
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Install dependencies:
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
 npm install
-```
 
-### Compile and Hot-Reload for Development
+Run the development server:
 
-```sh
 npm run dev
-```
+Usage
+Adding Fields:
 
-### Type-Check, Compile and Minify for Production
+Click the "Add Field" button to add a new input field.
+You can add up to a maximum of 10 fields.
+Removing Fields:
 
-```sh
-npm run build
-```
+Click the "Remove" button next to an input field to remove it.
+At least one field must remain.
+Counting Vowels:
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+Each input field displays the count of vowels in real-time as you type.
+Search Functionality:
 
-```sh
-npm run test:unit
-```
+Enter text in the search field at the top.
+Fields containing the search text are highlighted with a green background.
+If the search text matches any field, the search field is highlighted green. If no match is found, the search field is highlighted green.
+Project Structure
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+dynamic-form/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   └── DynamicForm.vue
+│   ├── App.vue
+│   ├── main.ts
+├── .gitignore
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── tsconfig.json
+└── vite.config.ts
 
-```sh
-npm run test:e2e:dev
-```
+Technologies Used
+Vue 3: Frontend framework used to build the dynamic form.
+Vite: Build tool that provides fast setup and development.
+Tailwind CSS: Utility-first CSS framework used for styling.
+TypeScript: For type checking and better developer experience.
+Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Contact
+For any questions or inquiries, please contact [bogdanmaliutawork@gmail.com].
