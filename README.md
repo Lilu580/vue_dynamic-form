@@ -35,23 +35,6 @@ Search Functionality:
 Enter text in the search field at the top.
 Fields containing the search text are highlighted with a green background.
 If the search text matches any field, the search field is highlighted green. If no match is found, the search field is highlighted green.
-Project Structure
-
-dynamic-form/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   │   └── DynamicForm.vue
-│   ├── App.vue
-│   ├── main.ts
-├── .gitignore
-├── index.html
-├── package.json
-├── postcss.config.js
-├── tailwind.config.js
-├── tsconfig.json
-└── vite.config.ts
 
 Technologies Used
 Vue 3: Frontend framework used to build the dynamic form.
