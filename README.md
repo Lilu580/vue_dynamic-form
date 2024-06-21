@@ -8,7 +8,7 @@ Search Functionality: A search field at the top highlights any input field that 
 Installation
 Clone the repository:
 
-git clone https://github.com/Lilu580/vue_dynamic-form
+git clone https://github.com/Lilu580/vue_dynamic-form.git
 cd dynamic-form
 
 Install dependencies:
